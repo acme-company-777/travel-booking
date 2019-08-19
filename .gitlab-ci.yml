@@ -1,0 +1,23 @@
+image: microsoft/dotnet:latest
+
+stages:
+  - build
+  - test
+
+variables:
+    test: "sample"
+
+before_script:
+  - "cd $CI_PROJECT_DIR/travel-booking"
+  - "dotnet restore"
+
+build:
+  stage: build
+  script:
+    - "dotnet build"
+
+test:
+  stage: test
+  script:
+    - "cd $CI_PROJECT_DIR/travel-booking"
+    - "dotnet test"
