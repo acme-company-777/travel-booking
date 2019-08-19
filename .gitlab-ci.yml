@@ -19,5 +19,5 @@ build:
 test:
   stage: test
   script:
-    - "cd $CI_PROJECT_DIR/travel-booking"
+    - "cd $CI_PROJECT_DIR/travel-booking.tests"
     - "dotnet test"
