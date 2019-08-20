@@ -20,3 +20,5 @@ sudo apt-get update
 
 if checker2 "apt-transport-https" == 0 ; then echo "Installed"; else echo "Not Installed!"; fi
 if checker2 "dotnet-sdk-2.2" == 0 ; then echo "Installed"; else echo "Not Installed!"; fi
+
+dotnet build
