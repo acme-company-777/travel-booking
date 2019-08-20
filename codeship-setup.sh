@@ -21,7 +21,7 @@ sudo apt-get update
 if checker2 "apt-transport-https" == 0 ; 
   then echo "Installed"; 
 else 
-  echo sudo apt install -y apt-transport-https; 
+  sudo apt install -y apt-transport-https; 
 fi
 if checker2 "dotnet-sdk-2.2" == 0 ; 
   then echo "Installed"; 
