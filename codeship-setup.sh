@@ -28,5 +28,5 @@ if checker2 "dotnet-sdk-2.2" == 0 ;
 else sudo apt install -y dotnet-sdk-2.2; 
 fi
 
-dotnet restore ~/src/github.com/acme-company-777/travel-booking
-dotnet build ~/src/github.com/acme-company-777/travel-booking
+dotnet restore 
+dotnet build 
