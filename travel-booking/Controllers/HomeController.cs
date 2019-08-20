@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Sentry;
 using travel_booking.Models;
 
 namespace travel_booking.Controllers
@@ -12,6 +13,8 @@ namespace travel_booking.Controllers
   {
     public IActionResult Index()
     {
+      SentrySdk.CaptureMessage("Something went wrong");
+
       return View();
     }
 
