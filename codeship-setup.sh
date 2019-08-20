@@ -28,4 +28,4 @@ if checker2 "dotnet-sdk-2.2" == 0 ;
 else sudo apt install -y dotnet-sdk-2.2; 
 fi
 
-dotnet build
+dotnet build ~/clone
