@@ -3,21 +3,21 @@ image: microsoft/dotnet:latest
 stages:
   - build
   - test
+  - deploy
 
-variables:
-    test: "sample"
-
-before_script:
-  - "cd $CI_PROJECT_DIR/travel-booking"
-  - "dotnet restore"
 
 build:
   stage: build
   script:
-    - "dotnet build"
+    - dotnet build
 
 test:
   stage: test
   script:
-    - "cd $CI_PROJECT_DIR/travel-booking.tests"
-    - "dotnet test"
+    - dotnet test travel-booking.tests
+
+deploy:dummy
+  stage: deploy
+  script: 
+    - echo 'hello'
+  when: manual
