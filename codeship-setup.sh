@@ -16,7 +16,8 @@ if [ ! -f packages-microsoft-prod.deb ];
     sudo add-apt-repository universe
 fi 
 
-sudo apt-get update
+sudo apt update
+sudo apt upgrade -y
 
 if checker2 "apt-transport-https" == 0 ; 
   then echo "Installed"; 
